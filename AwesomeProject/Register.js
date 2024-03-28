@@ -1,4 +1,5 @@
 // Register.js
+import axios from 'axios';
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
@@ -7,9 +8,20 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleRegister = () => {
+  const handleRegister = async() => {
     
-    console.log('Register button pressed');
+    try {
+      const response = await axios.post("https://todo-backend-b1ar.onrender.com/api/user/v1/register", {
+        email: email,
+        password: password
+      });
+      // console.log(response);
+     
+    } catch (error) {
+      console.error("Registration failed:", error.response ? error.response.data : error.message);
+      
+    }
+    
   };
 
   return (

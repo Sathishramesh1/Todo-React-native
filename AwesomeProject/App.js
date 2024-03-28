@@ -40,7 +40,7 @@ const LogoutButton = () => {
   };
 
   return (
-   <Button onPress={handleLogout}>LOG</Button>
+   <Button onPress={handleLogout}>Logout</Button>
   );
 };
 
