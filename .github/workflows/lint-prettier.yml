@@ -46,4 +46,4 @@ jobs:
           git config --global user.email "sathishrameshkec@gmail.com"  
           git add .
           git diff-index --quiet HEAD || git commit -m "Auto-format code with Prettier [skip ci]"
-          git push https://Sathishramesh1:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Sathishramesh1/your-repo.git
+          git push https://Sathishramesh1:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Sathishramesh1/Todo-React-native.git
