@@ -1,28 +1,30 @@
 // Register.js
-import axios from 'axios';
-import React, { useState } from 'react';
-import { View, StyleSheet } from 'react-native';
-import { TextInput, Button } from 'react-native-paper';
+import axios from 'axios'
+import React, { useState } from 'react'
+import { View, StyleSheet } from 'react-native'
+import { TextInput, Button } from 'react-native-paper'
 
 const Register = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-  const handleRegister = async() => {
-    
+  const handleRegister = async () => {
     try {
-      const response = await axios.post("https://todo-backend-b1ar.onrender.com/api/user/v1/register", {
-        email: email,
-        password: password
-      });
+      const response = await axios.post(
+        'https://todo-backend-b1ar.onrender.com/api/user/v1/register',
+        {
+          email: email,
+          password: password,
+        },
+      )
       // console.log(response);
-     
     } catch (error) {
-      console.error("Registration failed:", error.response ? error.response.data : error.message);
-      
+      console.error(
+        'Registration failed:',
+        error.response ? error.response.data : error.message,
+      )
     }
-    
-  };
+  }
 
   return (
     <View style={styles.container}>
@@ -43,8 +45,8 @@ const Register = () => {
         Register
       </Button>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -58,6 +60,6 @@ const styles = StyleSheet.create({
   button: {
     marginTop: 10,
   },
-});
+})
 
-export default Register;
+export default Register
