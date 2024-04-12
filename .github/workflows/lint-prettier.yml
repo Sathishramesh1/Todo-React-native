@@ -25,16 +25,23 @@ jobs:
           node-version: '16.0'
 
       - name: Install dependencies
-        run: npm install
+        run: | 
+            cd AwesomeProject
+            npm install
 
       - name: Lint code
-        run: npm run lint
+        run: | 
+            cd AwesomeProject
+            npm install
 
       - name: Run Prettier
-        run: npm run format
+        run: | 
+            cd AwesomeProject
+            npm install
 
       - name: Commit changes (if any)
         run: |
+          cd AwesomeProject
           git config --global user.name "Sathishramesh1"
           git config --global user.email "sathishrameshkec@gmail.com"  
           git add .
