@@ -14,7 +14,6 @@ jobs:
   lint-prettier:
     runs-on: ubuntu-latest
     
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -26,18 +25,18 @@ jobs:
 
       - name: Install dependencies
         run: | 
-            cd AwesomeProject
-            npm install
+          cd AwesomeProject
+          npm install
 
       - name: Lint code
         run: | 
-            cd AwesomeProject
-            npm install
+          cd AwesomeProject
+          npm run lint
 
       - name: Run Prettier
         run: | 
-            cd AwesomeProject
-            npm install
+          cd AwesomeProject
+          npm run format
 
       - name: Commit changes (if any)
         run: |
