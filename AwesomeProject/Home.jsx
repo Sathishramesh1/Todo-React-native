@@ -25,7 +25,7 @@ export default function Home() {
       try {
         const token = await SecureStore.getItemAsync('userToken')
         const response = await axios.get(
-          'https://todo-backend-b1ar.onrender.com/api/todo/v1/getall',
+          'https://13.234.238.94:3000/api/todo/v1/getall',
           {
             headers: {
               'x-auth-token': token,
@@ -47,7 +47,7 @@ export default function Home() {
     try {
       const token = await SecureStore.getItemAsync('userToken')
       const response = await axios.post(
-        'https://todo-backend-b1ar.onrender.com/api/todo/v1/create',
+        'https://13.234.238.94:3000/api/todo/v1/create',
         { title: todo },
         {
           headers: {
@@ -91,7 +91,7 @@ export default function Home() {
     try {
       const token = await SecureStore.getItemAsync('userToken')
       const response = await axios.patch(
-        `https://todo-backend-b1ar.onrender.com/api/todo/v1/mark/${id}`,
+        `https://13.234.238.94:3000/api/todo/v1/mark/${id}`,
         {},
         {
           headers: {
@@ -112,7 +112,7 @@ export default function Home() {
     try {
       const token = await SecureStore.getItemAsync('userToken')
       const response = await axios.post(
-        `https://todo-backend-b1ar.onrender.com/api/todo/v1/update/${id}`,
+        `https://13.234.238.94:3000/api/todo/v1/update/${id}`,
         { title: todo },
         {
           headers: {
@@ -152,7 +152,7 @@ export default function Home() {
     try {
       const token = await SecureStore.getItemAsync('userToken')
       await axios.delete(
-        `https://todo-backend-b1ar.onrender.com/api/todo/v1/remove/${id}`,
+        `https://13.234.238.94:3000/api/todo/v1/remove/${id}`,
         {
           headers: {
             'x-auth-token': token,

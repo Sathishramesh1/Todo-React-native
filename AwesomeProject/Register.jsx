@@ -11,7 +11,7 @@ const Register = () => {
   const handleRegister = async () => {
     try {
       const response = await axios.post(
-        'https://todo-backend-b1ar.onrender.com/api/user/v1/register',
+        'https://13.234.238.94:3000/api/user/v1/register',
         {
           email: email,
           password: password,

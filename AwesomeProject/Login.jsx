@@ -12,7 +12,7 @@ const Login = ({ navigation }) => {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        'https://todo-backend-b1ar.onrender.com/api/user/v1/login',
+        'https://13.234.238.94:3000/api/user/v1/login',
         {
           email: email,
           password: password,
